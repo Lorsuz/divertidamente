@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+  text-decoration: none;
+  list-style: none;
+  user-select: none;
+}
+
+body header {
+  background: url(img/capa.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+body header nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+body header nav ul {
+  display: flex;
+  list-style: none;
+}
+body header nav ul li {
+  margin: 0 30px;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+body header img {
+  width: 500px;
+  margin: 50px 20px;
+}
+body main section#characters {
+  margin: 0 AUTO;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main section#characters figure {
+  display: flex;
+  overflow: hidden;
+  width: 350px;
+  height: 400px;
+}
+body main section#characters figure img {
+  height: 400px;
+  transition: 1500ms;
+}
+body main section#characters figure figcaption {
+  color: #ffffff;
+  transition: 1500ms;
+}
+body main section#characters figure figcaption h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+body main section#characters figure figcaption p {
+  text-align: justify;
+  width: 320px;
+}
+body main section#characters figure:hover img {
+  transform: translateX(-720px);
+}
+body main section#characters figure:hover figcaption {
+  transform: translateX(-700px);
+}
+body footer {
+  height: 1150px;
+  background: #000 url(img/footer.jpg) no-repeat;
+  background-position: 0 450px;
+  background-size: contain;
+  color: #ffffff;
+}
+body footer > h2 {
+  margin: 0 auto;
+  padding: 30px 0 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+body footer > p {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0px 0 10px;
+  text-align: center;
+}
+body footer div.footer-horizontal {
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+body footer div.footer-horizontal h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+body footer div.footer-horizontal > div {
+  width: 33%;
+  padding: 10px 30px 0 50px;
+  height: 300px;
+}
+body footer div.footer-horizontal > div.devs ul li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.contato {
+  border-right: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+}
+body footer div.footer-horizontal > div.contato ul.dados li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais {
+  display: flex;
+  justify-content: center;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li {
+  margin: 40px 20px;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a {
+  position: relative;
+  transition: 100ms;
+  top: 0;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a i {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+body footer div.footer-horizontal > div.contato ul.redes-sociais li a:hover {
+  top: -5px;
+}
+body footer div.footer-horizontal > div.info ul li {
+  margin-top: 10px;
+}
+body footer div.footer-horizontal > div.info ul li a {
+  color: rgb(255, 255, 255);
+}
+body footer div.footer-horizontal > div.info ul li a:hover {
+  text-decoration: underline;
+}
+body footer div.copy p {
+  text-align: center;
+  padding: 20px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
