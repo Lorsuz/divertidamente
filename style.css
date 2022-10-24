@@ -375,6 +375,7 @@ body main section#end {
 body main section#end p {
   margin-bottom: 25px;
   font-size: 1.2rem;
+  text-align: justify;
 }
 body footer {
   height: 1150px;
