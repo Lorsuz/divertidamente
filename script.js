@@ -41,7 +41,7 @@ function printText () {
 	}
 	active = 1;
 }
-/* ================================================= */
+/* ==================================================== */
 
 var menuLinks = document.querySelectorAll( 'header nav ul li a[href^="#"]' );
 var extraLink = document.querySelectorAll( 'main a[href^="#resume"]' );
