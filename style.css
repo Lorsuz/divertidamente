@@ -1,26 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "inside-out";
+  src: url(fonts/Carton_Six.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: arial;
+  font-family: "Roboto";
   text-decoration: none;
   list-style: none;
-  user-select: none;
 }
 
+body {
+  background: linear-gradient(#010010 20%, #000131);
+}
 body header {
+  overflow: hidden;
   background: url(img/capa.jpg);
   background-size: cover;
   height: 100vh;
+  box-shadow: 0 30px 100px 100px #010010;
+}
+body header div.gradient {
+  background: linear-gradient(rgba(255, 255, 255, 0) 70%, #010010);
+  width: 100vw;
+  height: 100vh;
 }
 body header nav {
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
 body header nav ul {
   display: flex;
   list-style: none;
+  margin-left: 10px;
 }
 body header nav ul li {
   margin: 0 30px;
@@ -28,45 +43,338 @@ body header nav ul li {
 body header nav ul li a {
   text-decoration: none;
   color: white;
+  font-family: "inside-out";
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  transition: 300ms;
+}
+body header nav ul li a:hover {
+  color: #fbff01;
 }
 body header img {
   width: 500px;
   margin: 50px 20px;
 }
-body main section#characters {
-  margin: 0 AUTO;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+body p {
+  color: #ffffff;
 }
-body main section#characters figure {
+body main section > h1 {
+  color: #fff;
+  font-family: "inside-out";
+  letter-spacing: 2px;
+  font-size: 2.3rem;
+  padding: 30px;
+  text-align: center;
+}
+body main section#introduction {
+  padding: 100px 150px;
+}
+body main section#introduction p {
+  text-align: justify;
+  margin-bottom: 30px;
+  font-size: 1.25rem;
+}
+body main section#introduction figure.synopsis {
+  margin-bottom: 50px;
+  display: flex;
+  padding: 30px;
+}
+body main section#introduction figure.synopsis img {
+  width: 250px;
+}
+body main section#introduction figure.synopsis figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main section#introduction figure.synopsis figcaption h2 {
+  text-align: center;
+  color: white;
+  font-family: "inside-out";
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+body main section#introduction figure.synopsis figcaption p {
+  text-align: justify;
+  padding: 30px 50px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+body main section#introduction figure.synopsis figcaption a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0 0 5px #000000;
+  transition: 200ms;
+}
+body main section#introduction figure.synopsis figcaption a span {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: arial;
+  letter-spacing: 2px;
+  z-index: 1;
+  transition: 200ms;
+}
+body main section#introduction figure.synopsis figcaption a div.liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+}
+body main section#introduction figure.synopsis figcaption a div.liquid::after, body main section#introduction figure.synopsis figcaption a div.liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: rgb(0, 0, 0);
+}
+body main section#introduction figure.synopsis figcaption a div.liquid::before {
+  border-radius: 45%;
+  background: rgb(20, 20, 20);
+  animation: animate 5s linear infinite;
+}
+body main section#introduction figure.synopsis figcaption a div.liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+body main section#introduction figure.synopsis figcaption a:hover {
+  box-shadow: 0 0 10px #3D60D5;
+}
+body main section#introduction figure.synopsis figcaption a:hover div.liquid {
+  top: -120px;
+}
+body main section#introduction figure.synopsis figcaption a:hover span {
+  letter-spacing: 3px;
+}
+body main section#introduction figure.prota {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 20px;
   display: flex;
   overflow: hidden;
-  width: 350px;
   height: 400px;
+}
+body main section#introduction figure.prota div.img img {
+  margin: 0 50px;
+}
+body main section#introduction figure.prota div.img div#header-her-position {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50px;
+  transform: translateX(160px) translateY(-270px);
+}
+body main section#introduction figure.prota div#header-her-animation {
+  height: 500px;
+  transition: 500ms;
+}
+body main section#introduction figure.prota div#header-her-animation figcaption h2 {
+  text-align: center;
+  font-family: "inside-out";
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: #000131;
+}
+body main section#introduction figure.prota div#header-her-animation figcaption p {
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 600px;
+  text-align: justify;
+}
+body main section#introduction figure.prota div#header-her-animation blockquote {
+  position: relative;
+  top: 200px;
+}
+body main section#introduction figure.prota div#header-her-animation blockquote cite {
+  font-family: "inside-out";
+  font-size: 2.5rem;
+  color: #000131;
+  text-align: center;
+  cursor: pointer;
+}
+body main section#introduction figure.prota div#header-her-animation blockquote cite::after {
+  content: "";
+  height: 45px;
+  margin-left: 10px;
+  width: 3px;
+  background: #000131;
+  position: absolute;
+  animation: piscar 1000ms ease-in-out infinite;
+}
+body main section#characters {
+  padding-top: 0px;
+}
+body main section#characters figure {
+  width: 80%;
+  overflow: hidden;
+  margin: 0px auto 20px;
+  height: 400px;
+  display: flex;
+  border-radius: 10px;
 }
 body main section#characters figure img {
   height: 400px;
-  transition: 1500ms;
+}
+body main section#characters figure blockquote {
+  color: #ffffff;
+  transform: translateX(-200px) translateY(100px);
+  transition: 1000ms;
+  opacity: 1;
+}
+body main section#characters figure blockquote q {
+  width: 500px;
+  display: block;
+  font-size: 2rem;
+  font-family: "inside-out";
 }
 body main section#characters figure figcaption {
   color: #ffffff;
-  transition: 1500ms;
+  transform: translateX(400px) translateY(20px);
+  transition: 1000ms;
+  opacity: 0;
 }
 body main section#characters figure figcaption h2 {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px;
+  letter-spacing: 2px;
+  font-size: 1.9rem;
+  font-family: "inside-out";
 }
 body main section#characters figure figcaption p {
   text-align: justify;
-  width: 320px;
+  width: 530px;
 }
-body main section#characters figure:hover img {
-  transform: translateX(-720px);
+body main section#characters figure:hover blockquote {
+  transform: translateX(-200px) translateY(-300px);
+  opacity: 0;
 }
 body main section#characters figure:hover figcaption {
-  transform: translateX(-700px);
+  opacity: 1;
+  transform: translateX(-700px) translateY(20px);
+}
+body main section#resume {
+  padding: 50px;
+}
+body main section#resume div.line-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main section#resume div.line-resume aside {
+  display: flex;
+  flex-direction: column;
+}
+body main section#resume div.line-resume aside div {
+  display: flex;
+  align-items: center;
+}
+body main section#resume div.line-resume aside div p {
+  color: rgb(92, 92, 92);
+  width: 500px;
+  text-align: justify;
+  padding: 20px;
+  border: 2px solid #000131;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px 0px #ccc;
+}
+body main section#resume div.line-resume aside.left {
+  height: 700px;
+  justify-content: space-around;
+}
+body main section#resume div.line-resume aside.left div {
+  height: 233.3333333333px;
+}
+body main section#resume div.line-resume aside.right {
+  height: 900px;
+  justify-content: space-between;
+}
+body main section#resume div.line-resume aside.right div {
+  height: 225px;
+}
+body main section#resume div.line-resume > div.line {
+  margin: 0 20px;
+  height: 700px;
+  width: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  align-items: center;
+}
+body main section#resume div.line-resume > div.line > div.point {
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border: 2px solid #000131;
+  border-radius: 30px;
+}
+body main section#review {
+  background: #ffffff;
+  box-shadow: inset 0 0 20px #000131;
+  padding: 50px 150px;
+}
+body main section#review * {
+  color: rgb(53, 53, 53);
+}
+body main section#review > h1 {
+  color: #000131;
+}
+body main section#review > p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+body main section#review p {
+  text-align: justify;
+}
+body main section#review div {
+  padding-top: 20px;
+}
+body main section#review div > h2 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+  color: #484848;
+  font-size: 1.7rem;
+}
+body main section#review div > p {
+  font-size: 1.2rem;
+}
+body main section#review div ul li {
+  list-style: disc;
+  margin: 20px;
+}
+body main section#review div ul li h3 {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+body main section#review div ul li p {
+  font-size: 1.1rem;
+}
+body main section#end {
+  padding: 50px 150px;
+}
+body main section#end p {
+  margin-bottom: 25px;
+  font-size: 1.2rem;
 }
 body footer {
   height: 1150px;
@@ -152,6 +460,23 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 20px;
+}
+
+@keyframes piscar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animate {
+  from {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
